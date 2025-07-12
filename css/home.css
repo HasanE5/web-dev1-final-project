@@ -1,0 +1,83 @@
+@import url(main.css);
+
+.home .hero {
+  position: relative;
+  width: 100%;
+}
+
+.home img {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes bottom space under the image */
+}
+
+.home .info {
+  position: relative; /* Static position on mobile */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  color: var(--color-text);
+  background: rgba(211, 211, 211, 0.2);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.info h1 {
+  font-weight: 500;
+}
+
+.info .divider {
+  margin: 12px 0;
+  position: relative;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition-duration: 0.3s;
+  transition-property: all;
+}
+
+.info:hover .divider {
+  width: 100%;
+}
+
+.info a i {
+  padding-right: 8px;
+  color: var(--color-primary);
+}
+
+@media (min-width: 992px) {
+  .home {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .home img {
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+.home .info {
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  width: 450px;
+  background: rgba(255, 255, 255, 0.336);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  border-radius: 8px;
+}
+
+.dark .home .info {
+  background: rgba(0, 0, 0, 0.336);
+}
+
+@media (max-width: 530px) {
+  body {
+    flex-wrap: wrap;
+  }
+  .home .info {
+    display: none;
+  }
+}

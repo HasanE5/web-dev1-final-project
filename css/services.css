@@ -1,0 +1,113 @@
+@import url(main.css);
+
+.services {
+  color: var(--color-text);
+  background-color: var(--color-background-secondary);
+}
+
+.services .cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 30px;
+  gap: 20px;
+}
+
+.services .header .divider {
+  height: 2px;
+  width: 40px;
+  background-color: var(--color-primary);
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.services .header {
+  line-height: 30px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.services .header .title {
+  font-size: 24px;
+}
+
+.service-card {
+  width: 320px;
+  background-color: var(--color-background);
+  padding: 20px 25px;
+  border-radius: var(--rounded);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition-duration: 0.3s;
+  transition-property: all;
+}
+.service-card:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.service-card .icon {
+  color: var(--color-primary);
+  font-size: 45px;
+  line-height: 1;
+  margin-bottom: 10px;
+  transition-duration: 0.3s;
+  transition-property: all;
+}
+
+.service-card:hover .icon {
+  color: white;
+}
+
+.service-card .number {
+  position: relative;
+  font-size: 28px;
+  color: white;
+  line-height: 0.3;
+  top: -6px;
+  margin-top: 20px;
+  text-shadow: -1px -1px 0 var(--color-primary), 1px -1px 0 var(--color-primary),
+    -1px 1px 0 var(--color-primary), 1px 1px 0 var(--color-primary);
+  text-align: right;
+}
+.service-card:hover .number {
+  color: var(--color-primary);
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.dark .service-card .number {
+  color: black;
+  
+}
+
+.service-card .divider {
+  margin: 12px 0;
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition-duration: 0.3s;
+  transition-property: all;
+}
+.service-card:hover .divider {
+  width: 100%;
+  background-color: white;
+}
+
+.service-card .description {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1300px) {
+  .services .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .services .cards {
+    grid-template-columns: 1fr;
+  }
+}
